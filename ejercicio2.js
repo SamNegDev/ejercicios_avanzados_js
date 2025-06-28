@@ -40,10 +40,15 @@ const users = [
         },
     },
 ];
+let sumVolumen = 0;
+let totalFavourites = 0;
 for (const user of users) {
     for (const sound in user.favoritesSounds) {
-        console.log(user.favoritesSounds[sound].volume);
+        sumVolumen += user.favoritesSounds[sound].volume;
+        totalFavourites++;
     }
 }
+console.log("El volumen medio por favoritos es igual a : " + (sumVolumen / totalFavourites));
+
 
 
